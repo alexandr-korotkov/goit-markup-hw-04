@@ -7,7 +7,9 @@
   --accent-button-color: #2196f3;
   --accent-hero-button-color: #188ce8;
   --bg-button-color: #f5f4fa;
-  --bg-hero-footer-color: #2f303a;
+  --bg-footer-color: #2f303a;
+  --bg-hero-color: #c4c4c4;
+  --icon-color: #afb1b8;
 }
 body {
   background-color: var(--primary-bg-color);
@@ -112,9 +114,15 @@ img {
   color: var(--accent-button-color);
 }
 .hero-box {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/herobgimg.jpg");
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--bg-hero-footer-color);
+  background-color: var(--bg-hero-color);
 }
 .hero-title {
   margin-bottom: 30px;
@@ -164,6 +172,22 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.features-icon-list {
+  display: flex;
+}
+.features-icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--bg-button-color);
+}
+.features-icon-item:not(:last-child) {
+  margin-right: 30px;
 }
 .features-item {
   display: flex;
@@ -250,9 +274,37 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
-.team-item {
-  background-color: var(--bg-button-color);
+.social-list-item {
+  display: flex;
+  justify-content: center;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-icon {
+  fill: var(--icon-color);
+}
+/* .social-link:hover,
+.social-link:focus {
+  fill: var(--accent-button-color);
+} */
+.social-list:not(:last-child) {
+  margin-right: 10px;
+}
+.our-clients-title {
+  padding-top: 94px;
+  font-weight: 700px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 .portfolio-box {
   padding-top: 94px;
@@ -324,7 +376,7 @@ img {
 .footer-box {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--bg-hero-footer-color);
+  background-color: var(--bg-footer-color);
 }
 .footer-logo {
   color: var(--accent-button-color);
